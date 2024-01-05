@@ -28,7 +28,6 @@ class Solution {
         if ((min != null && node.val <= min) || (max != null && node.val >= max)) {
             return false;
         }
-
         // Recursively check the left and right subtrees
         // Update max for the left subtree and min for the right subtree
         return isValidBST(node.left, min, node.val) && isValidBST(node.right, node.val, max);
