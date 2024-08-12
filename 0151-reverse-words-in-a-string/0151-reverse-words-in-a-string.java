@@ -1,5 +1,5 @@
 class Solution {
-    public static String reverseWords(String s) {
+    public String reverseWords(String s) {
         String trimmed = s.trim();
         String removeWhiteSpace = trimmed.replaceAll("\\s+", " ");
         String[] split = removeWhiteSpace.split(" ");
