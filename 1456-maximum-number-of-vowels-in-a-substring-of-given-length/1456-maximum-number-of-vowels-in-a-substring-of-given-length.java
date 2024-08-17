@@ -13,7 +13,13 @@ class Solution {
         maxSum = currentSum;
 
         for(int i = k; i < s.length(); i++) {
-            currentSum = currentSum - (isVowel(s.charAt(i - k)) ? 1 : 0) + (isVowel(s.charAt(i)) ? 1 : 0);
+            if (isVowel(s.charAt(i - k))) {
+                currentSum--;
+            }
+
+            if (isVowel(s.charAt(i))) {
+                currentSum++;
+            }
             maxSum = Math.max(maxSum, currentSum);
         }
 
